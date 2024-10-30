@@ -14,12 +14,12 @@ export const AddRecords = () => {
           <div className="bg-white h-full w-cover rounded-[18px]">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <div className="border-b border-[#E2E8F0] flex pb-3 justify-between">
+              <div className="border-b border-[#E2E8F0] flex px-6 pb-3 justify-between">
                 <div className="">Add Record</div>
                 <button className="btn btn-sm btn-circle btn-ghost ">✕</button>
               </div>
               <div className="flex">
-                <div className="flex flex-col p-6">
+                <div className="flex flex-col px-6 pt-5 pb-2">
                   <div className="bg-[#F3F4F6] h-10 rounded-[100px] flex ">
                     <button className="bg-[var(--blue)] flex justify-center items-center w-[170px] rounded-[20px] px-10 h-10 text-[#F9FAFB] text-base font-normal">
                       Expense
@@ -28,7 +28,7 @@ export const AddRecords = () => {
                       Income
                     </button>
                   </div>
-                  <div className="pt-5">
+                  <div className="pt-5 flex flex-col gap-4">
                     <label className="input w-[348px] input-bordered flex flex-col border border-[#D1D5DB] bg-[#F3F4F6] h-[76px] py-3 px-4 gap-2">
                       Amount
                       <input
@@ -43,13 +43,37 @@ export const AddRecords = () => {
                       </div>
                       <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6]">
                         <option>Choose</option>
-                        <option>Star Wars</option>
-                        <option>Harry Potter</option>
-                        <option>Lord of the Rings</option>
-                        <option>Planet of the Apes</option>
-                        <option>Star Trek</option>
+                        <option>Food & Drinks</option>
+                        <option>Shopping</option>
+                        <option>Housing</option>
+                        <option>Transportation</option>
+                        <option>Vehicle</option>
+                        <option>Life & Entertainment</option>
+                        <option>Communication, PC</option>
+                        <option>Financial Expenses</option>
+                        <option>Investments</option>
+                        <option>Income</option>
+                        <option>Others</option>
                       </select>
                     </label>
+                    <div className="flex gap-3">
+                      <label className="form-control w-full ">
+                        <div className="label">
+                          <input type="date" />
+                          Date
+                        </div>
+                        <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6]"></select>
+                      </label>
+                      <label className="form-control w-full ">
+                        <div className="label">
+                          <span className="label-text">Time</span>
+                        </div>
+                        <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6]"></select>
+                      </label>
+                    </div>
+                    <button className="bg-[var(--blue)] flex justify-center items-center mt-4 w-full rounded-[20px] h-10 text-[#F9FAFB] text-base font-normal">
+                      Add Record
+                    </button>
                   </div>
                 </div>
                 <div className="w-auto p-6">
@@ -57,21 +81,14 @@ export const AddRecords = () => {
                     <div className="label">
                       <span className="label-text">Payee</span>
                     </div>
-                    <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6] w-[348px]">
-                      <option>Write here</option>
-                      <option>Star Wars</option>
-                      <option>Harry Potter</option>
-                      <option>Lord of the Rings</option>
-                      <option>Planet of the Apes</option>
-                      <option>Star Trek</option>
-                    </select>
+                    <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6] w-[348px]"></select>
                   </label>
                   <label className="form-control">
                     <div className="label">
                       <span className="label-text">Note</span>
                     </div>
                     <textarea
-                      className="textarea textarea-bordered h-24"
+                      className="textarea textarea-bordered "
                       placeholder="Write here"
                     ></textarea>
                   </label>
