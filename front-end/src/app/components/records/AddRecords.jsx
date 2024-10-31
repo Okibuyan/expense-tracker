@@ -11,7 +11,7 @@ export const AddRecords = () => {
       </button>
       <dialog id="my_modal_3" className="modal ">
         <div className="modal-box w-auto max-w-none">
-          <div className="bg-white h-full w-cover rounded-[18px]">
+          <div className="bg-white h-cover w-cover rounded-[18px]">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <div className="border-b border-[#E2E8F0] flex px-6 pb-3 justify-between">
@@ -19,7 +19,7 @@ export const AddRecords = () => {
                 <button className="btn btn-sm btn-circle btn-ghost ">✕</button>
               </div>
               <div className="flex">
-                <div className="flex flex-col px-6 pt-5 pb-2">
+                <div className="flex flex-col px-6 pt-5">
                   <div className="bg-[#F3F4F6] h-10 rounded-[100px] flex ">
                     <button className="bg-[var(--blue)] flex justify-center items-center w-[170px] rounded-[20px] px-10 h-10 text-[#F9FAFB] text-base font-normal">
                       Expense
@@ -56,39 +56,42 @@ export const AddRecords = () => {
                         <option>Others</option>
                       </select>
                     </label>
-                    <div className="flex gap-3">
-                      <label className="form-control w-full ">
-                        <div className="label">
-                          <input type="date" />
-                          Date
-                        </div>
-                        <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6]"></select>
-                      </label>
-                      <label className="form-control w-full ">
-                        <div className="label">
-                          <span className="label-text">Time</span>
-                        </div>
-                        <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6]"></select>
-                      </label>
+                    <div className="flex  gap-3">
+                      <div className="flex flex-col">
+                        <label>Date</label>
+                        <input
+                          className="bg-[#F3F4F6] rounded-[8px] w-[168px] border border-[#D1D5DB] p-[8px]"
+                          type="date"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <label>Time</label>
+                        <input
+                          className="bg-[#F3F4F6] rounded-[8px] w-[168px] border border-[#D1D5DB] p-[8px]"
+                          type="time"
+                        />
+                      </div>
                     </div>
-                    <button className="bg-[var(--blue)] flex justify-center items-center mt-4 w-full rounded-[20px] h-10 text-[#F9FAFB] text-base font-normal">
+                    <button className="bg-[var(--blue)] mt-3 flex justify-center items-center w-full rounded-[20px] h-10 text-[#F9FAFB] text-base font-normal">
                       Add Record
                     </button>
                   </div>
                 </div>
-                <div className="w-auto p-6">
+                <div className="w-auto pt-5 px-6">
                   <label className="form-control  ">
                     <div className="label">
-                      <span className="label-text">Payee</span>
+                      <p className="text-base leading-6">Payee</p>
                     </div>
-                    <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6] w-[348px]"></select>
+                    <select className="select select-bordered border-[#D1D5DB] bg-[#F3F4F6] w-[348px]">
+                      <option>Write here</option>
+                    </select>
                   </label>
-                  <label className="form-control">
+                  <label className="form-control h-full">
                     <div className="label">
                       <span className="label-text">Note</span>
                     </div>
                     <textarea
-                      className="textarea textarea-bordered "
+                      className="textarea textarea-bordered h-[260px]"
                       placeholder="Write here"
                     ></textarea>
                   </label>
