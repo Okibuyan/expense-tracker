@@ -33,13 +33,13 @@ export const AddCategoryIcon = () => {
   return (
     <div>
       <button
-        className="input input-bordered w-[84px] flex items-center gap-2"
+        className="input input-bordered w-[84px] flex items-center gap-2 "
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
         <HouseIcon /> <select className=""></select>
       </button>
 
-      <dialog id="my_modal_2" className="modal">
+      <dialog id="my_modal_2" className="modal left-[-75px] top-[190px]">
         <div className="modal-box w-[312px]">
           <div className="bg-white h-full rounded-[18px]">
             <form method="dialog" className="modal-backdrop">

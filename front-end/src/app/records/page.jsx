@@ -50,11 +50,11 @@ export default function Page() {
                 Category
               </h1>
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-[#1F2937] text-base leading-6 text-[#1F2937] text-base leading-6">
+                <div className="flex items-center gap-2 text-[#1F2937] text-base leading-6">
                   <EyeIcon />
                   Food & Drinks
                 </div>
-                <div className="flex items-center gap-2 text-[#1F2937] text-base leading-6">
+                <div className="flex items-center gap-2  text-base leading-6">
                   <EyeIcon />
                   Shopping
                 </div>
