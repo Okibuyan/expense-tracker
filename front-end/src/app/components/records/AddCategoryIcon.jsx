@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AnchorSimple } from "../svg/addCategory/AnchorSimple";
 import { Baseball } from "../svg/addCategory/Baseball";
 import { BezierCurve } from "../svg/addCategory/BezierCurve";
@@ -30,6 +31,60 @@ import { Vignette } from "../svg/addCategory/Vignette";
 import { Watch } from "../svg/addCategory/Watch";
 
 export const AddCategoryIcon = () => {
+  //   const [iconColor, setIconColor] = useState("");
+
+  //   const handleColor = (iconColor) => {
+  //     setIconColor(iconColor);
+  //   };
+  // const handleIcon=()=>{
+
+  // }
+
+  let colors = [
+    { color: "#01B3FF" },
+    { color: "#41CC00" },
+    { color: "#F9D100" },
+    { color: "#FF7B01" },
+    { color: "#AE01FF" },
+    { color: "#FF0101" },
+  ];
+
+  let icons = [
+    { name: "HouseLine", icon: <HouseLine /> },
+    {
+      name: "IdentificationBadge",
+      icon: <IdentificationBadge />,
+    },
+    {
+      name: "IdentificationCard",
+      icon: <IdentificationCard />,
+    },
+    { name: "Ladder", icon: <Ladder /> },
+    { name: "IntersectSquare", icon: <IntersectSquare /> },
+    { name: "ImageSquare", icon: <ImageSquare /> },
+    { name: "MagnifyingGLassPlus", icon: <MagnifyingGLassPlus /> },
+    { name: "MicrosoftExcelLogo", icon: <MicrosoftExcelLogo /> },
+    { name: "Notepad", icon: <Notepad /> },
+    { name: "ListPlus", icon: <ListPlus /> },
+    { name: "Leaf", icon: <Leaf /> },
+    { name: "NumberFive", icon: <NumberFive /> },
+    { name: "NumberCircleSeven", icon: <NumberCircleSeven /> },
+    { name: "RoadHorizon", icon: <RoadHorizon /> },
+    { name: "HourGlassMedium", icon: <HourGlassMedium /> },
+    { name: "AnchorSimple", icon: <AnchorSimple /> },
+    { name: "BezierCurve", icon: <BezierCurve /> },
+    { name: "Exclude", icon: <Exclude /> },
+    { name: "Vignette", icon: <Vignette /> },
+    { name: "Baseball", icon: <Baseball /> },
+    { name: "Question", icon: <Question /> },
+    { name: "Exam", icon: <Exam /> },
+    { name: "Watch", icon: <Watch /> },
+    { name: "GlobeSimple", icon: <GlobeSimple /> },
+    { name: "OrangeSlice", icon: <OrangeSlice /> },
+    { name: "Peace", icon: <Peace /> },
+    { name: "ToiletPaper", icon: <ToiletPaper /> },
+    { name: "Pencil", icon: <Pencil /> },
+  ];
   return (
     <div>
       <button
@@ -45,48 +100,24 @@ export const AddCategoryIcon = () => {
             <form method="dialog" className="modal-backdrop">
               {/* if there is a button in form, it will close the modal */}
               <div className="border-b border-[#E2E8F0] pb-6  grid grid-cols-6 gap-6">
-                <HouseIcon />
-                <HouseLine />
-                <IdentificationBadge />
-                <IdentificationCard />
-                <Ladder />
-                <IntersectSquare />
-                <ImageSquare />
-                <MagnifyingGLassPlus />
-                <Microphone />
-                <MicrosoftExcelLogo />
-                <Notepad />
-                <ListPlus />
-                <Leaf />
-                <NumberFive />
-                <NumberCircleSeven />
-                <RoadHorizon />
-                <HourGlassMedium />
-                <AnchorSimple />
-                <BezierCurve />
-                <Exclude />
-                <Vignette />
-                <Baseball />
-                <Question />
-                <Exam />
-                <Watch />
-                <GlobeSimple />
-                <OrangeSlice />
-                <Peace />
-                <ToiletPaper />
-                <Pencil />
-              </div>{" "}
-              <button>
-                <div className="pt-6 flex justify-between">
-                  <div className="h-6 w-6 rounded-full bg-[#0166FF]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#01B3FF]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#41CC00]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#F9D100]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#FF7B01]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#AE01FF]"></div>
-                  <div className="h-6 w-6 rounded-full bg-[#FF0101]"></div>
-                </div>
-              </button>
+                {icons?.map((icon, index) => (
+                  <button>{icon?.icon}</button>
+                ))}
+              </div>
+              <div className="flex items-center justify-between mt-4">
+                {colors.map((color, index) => {
+                  return (
+                    <button
+                      // onClick={() => {
+                      //   handleColor(color?.color);
+                      // }}
+                      key={index}
+                      style={{ backgroundColor: color?.color }}
+                      className="h-6 w-6 rounded-full "
+                    ></button>
+                  );
+                })}
+              </div>
             </form>
           </div>
         </div>

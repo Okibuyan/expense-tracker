@@ -10,7 +10,10 @@ export default function Header() {
         <div className="text-base font-normal">Records</div>
       </div>
       <div className="flex items-center gap-6">
-        <button className="flex items-center justify-center gap-1 py-0 h-8 w-[99px] bg-[var(--blue)] rounded-[20px]">
+        <button
+          className="flex items-center justify-center gap-1 py-0 h-8 w-[99px] bg-[var(--blue)] rounded-[20px]"
+          onClick={() => document.getElementById("my_modal_3").showModal()}
+        >
           <PlusIcon /> <p className=" text-white text-sm">Record</p>
         </button>
 
