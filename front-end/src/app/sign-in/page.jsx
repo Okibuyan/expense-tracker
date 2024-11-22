@@ -62,9 +62,11 @@ export default function Page() {
                   placeholder="Password"
                   className="input input-bordered text-[#A3A3A3] text-base w-full  border  border-[#D1D5DB] bg-[#F3F4F6]"
                 />
-                <button className="btn btn-primary rounded-[20px] text-xl leading-7 text-white">
-                  Log in
-                </button>
+                <Link href="./dashboard">
+                  <button className="btn btn-primary rounded-[20px] text-xl leading-7 text-white">
+                    Log in
+                  </button>
+                </Link>
               </form>
             </div>
             <div className="flex gap-1 h-8 justify-center items-center">

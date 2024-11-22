@@ -63,6 +63,7 @@ export const AddCategoryIcon = () => {
     { name: "IntersectSquare", icon: <IntersectSquare /> },
     { name: "ImageSquare", icon: <ImageSquare /> },
     { name: "MagnifyingGLassPlus", icon: <MagnifyingGLassPlus /> },
+    { name: "Microphone", icon: <Microphone /> },
     { name: "MicrosoftExcelLogo", icon: <MicrosoftExcelLogo /> },
     { name: "Notepad", icon: <Notepad /> },
     { name: "ListPlus", icon: <ListPlus /> },
@@ -101,7 +102,7 @@ export const AddCategoryIcon = () => {
               {/* if there is a button in form, it will close the modal */}
               <div className="border-b border-[#E2E8F0] pb-6  grid grid-cols-6 gap-6">
                 {icons?.map((icon, index) => (
-                  <button>{icon?.icon}</button>
+                  <button key={index}>{icon?.icon}</button>
                 ))}
               </div>
               <div className="flex items-center justify-between mt-4">

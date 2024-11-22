@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+import Page from "../dashboard/page";
 import { LogoIcon } from "./svg/LogoIcon";
 import { PlusIcon } from "./svg/PlusIcon";
 
@@ -6,8 +9,15 @@ export default function Header() {
     <div className="flex h-[72px] w-[1440px] justify-between">
       <div className="flex items-center gap-6">
         <LogoIcon />
-        <div className="text-base font-semibold">Dashboard</div>
-        <div className="text-base font-normal">Records</div>
+        <Link href="./dashboard">
+          <button className="text-base font-semibold"></button>
+          Dashboard
+        </Link>
+
+        <Link href="./records">
+          <button className="text-base font-normal"></button>
+          Records
+        </Link>
       </div>
       <div className="flex items-center gap-6">
         <button
@@ -16,8 +26,10 @@ export default function Header() {
         >
           <PlusIcon /> <p className=" text-white text-sm">Record</p>
         </button>
-
-        <img src="/Avatar.png" height="40px" width="40px" />
+        <Link href="./">
+          {" "}
+          <img src="/Avatar.png" height="40px" width="40px" />
+        </Link>
       </div>
     </div>
   );

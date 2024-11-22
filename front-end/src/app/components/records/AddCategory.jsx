@@ -1,3 +1,4 @@
+"use client";
 import { HouseIcon } from "../svg/addCategory/HouseIcon";
 import { PlusIcon } from "../svg/PlusIcon";
 import { AddCategoryIcon } from "./AddCategoryIcon";
